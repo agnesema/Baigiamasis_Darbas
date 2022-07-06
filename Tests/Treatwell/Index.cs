@@ -19,9 +19,19 @@ namespace Tests.Treatwell
         }
 
         [Test]
-        public static void something()
+        public static void searchForService()
         {
+            string expectedSearchResult = "salonai siūlantys paslaugą: veidas šalia Justiniškes, Vilnius";
+            string actualSearchResult;
+
             IndexPage.clickAcceptCookies();
+            IndexPage.enterServiceName("Veidas");
+            IndexPage.enterLocation("Justiniškės");
+            IndexPage.chooseDateTomorrow();
+            IndexPage.clickSearchButton();
+
+            actualSearchResult = IndexPage.getSearchResultMessage();
+            Assert.IsTrue(actualSearchResult.Contains(expectedSearchResult));
         }
     }
 }
