@@ -54,8 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Treatwell\GiftVoucher.cs" />
     <Compile Include="Treatwell\HaircutWomen.cs" />
     <Compile Include="Treatwell\Index.cs" />
+    <Compile Include="Treatwell\TreatwellPartners.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BaseClasses\" />

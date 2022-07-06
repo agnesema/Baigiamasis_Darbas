@@ -32,9 +32,23 @@ namespace Framework.Pages.TreatwellPages
             Common.clickElement(locatorThird);
         }
 
-        public static void sortByTopRatedSalons()
+        public static string getResultMessage()
         {
-            string locator = "//*[text()='Top Rated salonai']";
+            string locator = "//*[@class='Summary-module--services--c3d157']";
+            return Common.getElementText(locator);
+        }
+
+        public static void clickBookButton()
+        {
+            string locator = "(//*[text()='Rezervuoti'])[10]";
+            //Common.waitForElementToBeClickable(locator);
+            Common.clickElement(locator);
+        }
+
+        public static void selectSecondOptionWomanHaircut()
+        {
+            string locator = "//div[@id='container']//*[text()='Moteriškas  kirpimas']";
+            Common.waitForElementToBeClickable(locator);
             Common.clickElement(locator);
         }
 

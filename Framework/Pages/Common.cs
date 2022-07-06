@@ -14,6 +14,13 @@ namespace Framework.Pages
             return Driver.getDriver().FindElement(By.XPath(locator));
         }
 
+        internal static void selectOptionByValue(string locator, string value)
+        {
+            IWebElement element = getElement(locator);
+            SelectElement selectElement = new SelectElement(element);
+            selectElement.SelectByText(value);
+        }
+
         internal static void clickElement(string locator)
         {
             getElement(locator).Click();
@@ -39,6 +46,12 @@ namespace Framework.Pages
         internal static string getElementText(string locator)
         {
             return getElement(locator).Text;
+        }
+
+        internal static void waitForElementToBeVisible(string locator)
+        {
+            WebDriverWait w = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(10));
+            w.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Framework;
 using Framework.Pages.TreatwellPages;
 using NUnit.Framework;
+using System.Threading;
 
 namespace Tests.Treatwell
 {
@@ -16,12 +17,20 @@ namespace Tests.Treatwell
         [Test]
         public static void findSalon()
         {
+            string expectedMessage = "1 paslauga ";
+            string actualMessage;
+
             IndexPage.clickAcceptCookies();
             HaircutWomenPage.clickFilter();
             HaircutWomenPage.sortByLowestPrice();
             HaircutWomenPage.sortByAmenities();
-            HaircutWomenPage.sortByTopRatedSalons();
             HaircutWomenPage.clickShowResultsButton();
+            HaircutWomenPage.selectSecondOptionWomanHaircut();
+            HaircutWomenPage.clickBookButton();
+
+            actualMessage = HaircutWomenPage.getResultMessage();
+            Assert.AreEqual(expectedMessage, actualMessage);
+
         }
 
 
