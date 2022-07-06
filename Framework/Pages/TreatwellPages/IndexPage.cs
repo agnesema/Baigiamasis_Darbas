@@ -30,15 +30,41 @@ namespace Framework.Pages.TreatwellPages
             Common.clickElement(locatorLocationOption);            
         }
 
-        public static string getSearchResultMessage()
+        public static string getServiceSearchResultMessage()
         {
             string locator = "//*[@class='ResultsSummary-module--resultsSummary--69bb6c']";
             return Common.getElementText(locator);
         }
 
+        public static void enterSalonName(string input)
+        {
+            string locatorField = "(//input[@class='InputField-module--input--ba477c'])[4]";
+            string locatorOption = "//*[text()='Look Good by A. Lo']";
+            Common.sendKeysToElement(locatorField, input);
+            Common.waitForElementToBeClickable(locatorOption);
+            Common.clickElement(locatorOption);
+        }
+
+        public static string getSalonSearchResultMessage()
+        {
+            string locator = "//*[@class='Text-module_smHero__2uXfi style-module--name--9886df']";
+            return Common.getElementText(locator);
+        }
+
+        public static void clickSalonBar()
+        {
+            string locator = "//*[text()='Salonas']";
+            Common.clickElement(locator);
+        }
+
         public static void clickSearchButton()
         {
-            string locator = "//*[text()='Ieškoti']";
+            string locator = "(//*[@class = 'Button-module--label--47a4ba'])[1]";
+            Common.clickElement(locator);
+        }
+        public static void clickSearchButtonSalonBar()
+        {
+            string locator = "(//*[@class = 'Button-module--label--47a4ba'])[2]";
             Common.clickElement(locator);
         }
 

@@ -30,8 +30,24 @@ namespace Tests.Treatwell
             IndexPage.chooseDateTomorrow();
             IndexPage.clickSearchButton();
 
-            actualSearchResult = IndexPage.getSearchResultMessage();
+            actualSearchResult = IndexPage.getServiceSearchResultMessage();
             Assert.IsTrue(actualSearchResult.Contains(expectedSearchResult));
+        }
+
+        [Test]
+        public static void searchForSalon()
+        {
+            string expectedSearchResult = "Look Good by A. Lo";
+            string actualSearchResult;
+
+            IndexPage.clickAcceptCookies();
+            IndexPage.clickSalonBar();
+            IndexPage.enterSalonName("Look Good");
+            IndexPage.clickSearchButtonSalonBar();
+
+            actualSearchResult = IndexPage.getSalonSearchResultMessage();
+
+            Assert.AreEqual(expectedSearchResult, actualSearchResult);
         }
     }
 }
