@@ -1,10 +1,7 @@
 ﻿
 using NUnit.Framework;
 using Framework;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using Framework.Pages.TreatwellPages;
 
 namespace Tests.Treatwell
@@ -46,7 +43,6 @@ namespace Tests.Treatwell
             IndexPage.clickSearchButtonSalonBar();
 
             actualSearchResult = IndexPage.getSalonSearchResultMessage();
-
             Assert.AreEqual(expectedSearchResult, actualSearchResult);
         }
     }

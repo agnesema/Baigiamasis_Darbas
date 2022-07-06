@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Driver.cs" />
     <Compile Include="Pages\Common.cs" />
+    <Compile Include="Pages\TreatwellPages\HaircutWomenPage.cs" />
     <Compile Include="Pages\TreatwellPages\IndexPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
