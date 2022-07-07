@@ -70,7 +70,7 @@ namespace Framework.Pages.TreatwellPages
             Common.clickElement(locator);
         }
 
-        public static void selectSecondOptionWomanHaircut()
+        public static void selectSecondSalonWomanHaircutoption()
         {
             string locator = "//div[@id='container']//*[text()='Moteriškas  kirpimas']";
             Common.waitForElementToBeClickable(locator);

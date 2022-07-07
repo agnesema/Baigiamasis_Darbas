@@ -15,7 +15,7 @@ namespace Tests.Treatwell
         }
 
         [Test]
-        public static void findSalon()
+        public static void findFilteredSalonListAndBookHaircut ()
         {
             string expectedMessage = "1 paslauga ";
             string actualMessage;
@@ -24,7 +24,7 @@ namespace Tests.Treatwell
             HaircutWomenPage.sortByLowestPrice();
             HaircutWomenPage.sortByAmenities();
             HaircutWomenPage.clickShowResultsButton();
-            HaircutWomenPage.selectSecondOptionWomanHaircut();
+            HaircutWomenPage.selectSecondSalonWomanHaircutoption();
             HaircutWomenPage.clickBookButton();
 
             actualMessage = HaircutWomenPage.getResultMessage();
@@ -32,7 +32,7 @@ namespace Tests.Treatwell
         }
 
         [Test]
-        public static void ReserveService()
+        public static void ReserveServiceAndCheckPrice()
         {
             string expectedPrice;
             string actualPrice;
