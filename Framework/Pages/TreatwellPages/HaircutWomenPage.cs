@@ -40,20 +40,20 @@ namespace Framework.Pages.TreatwellPages
 
         public static string readPrice()
         {
-            string locator = "//*[@id='container']/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div[3]/div/div[2]/div/div/span";
+            string locator = "//*[@id='container']/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/div/div/span";
             return Common.getElementText(locator);
         }
 
         public static string readActualPrice()
         {
-            string locator = "//*[@class='Inline-module_inline__1aHBb Inline-module_xs__1AzT4 Inline-module_alignCenter__uIC18 Inline-module_justifyStart__2svO3'][1]/span";
+            string locator = "//*[text()='Užsakymo suma']/following-sibling::span";
             Common.waitForElementToBeVisible(locator);
             return Common.getElementText(locator);
         }
 
             public static void clickChooseTimeButton()
         {
-            string locator = "//*[@class='Button-module--button--bf18db Button-module--primaryButton--0c4e9a'][1]";
+            string locator = "//*[@class='Button-module--buttonContents--e56373']";
             Common.clickElement(locator);
         }
 
@@ -65,13 +65,13 @@ namespace Framework.Pages.TreatwellPages
 
         public static void selectDate()
         {
-            string locator = "//*[@data-date='2022-07-11'][1]";
+            string locator = "//*[@data-date='2022-07-20']";
             Common.clickElement(locator);
         }
 
         public static void selectHaircutService()
         {
-            string locator = "//*[@id='menu']/div/div/div[2]/div[3]/div/div[3]/div/button/div/span";
+            string locator = "(//*[text()='Rezervuoti'])[1]";
             //Common.waitForElementToBeClickable(locator);
             Common.clickElement(locator);
         }
@@ -97,8 +97,13 @@ namespace Framework.Pages.TreatwellPages
 
         public static void clickOnFirstSalon()
         {
-            string locator = "//*[text()='Marina @ Yoly']";
+            string locator = "//*[text()='Vizija Lux (PC MADA)']";
             Common.clickElement(locator);
+        }
+
+        public static void clickOkOnAlertBox()
+        {
+            Common.alertAccept();
         }
     }
 }

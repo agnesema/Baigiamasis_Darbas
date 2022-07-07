@@ -1,16 +1,17 @@
 ﻿using Framework;
 using Framework.Pages.TreatwellPages;
 using NUnit.Framework;
+using Tests.BaseClasses;
 
 namespace Tests.Treatwell
 {
-    internal class TreatwellPartners
+    internal class TreatwellPartners : BaseTest
     {
         [SetUp]
         public static void open()
         {
-            Driver.setDriver();
             Driver.open("https://www.treatwell.lt/partneriai/");
+            IndexPage.clickAcceptCookies();
         }
 
         [Test]
@@ -19,7 +20,7 @@ namespace Tests.Treatwell
             string expectedMessage = "Vienas ar daugiau laukų su klaidomis. Patikrinkite ir pataisę pabandykite iš naujo.";
             string actualMessage;
 
-            IndexPage.clickAcceptCookies();
+            
             TreatwellPartnersPage.clickBecomePartnerButton();
             TreatwellPartnersPage.enterEmail("email");
             TreatwellPartnersPage.selectPartnerByText("Salonas, įsikūręs namuose");

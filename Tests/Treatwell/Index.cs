@@ -3,16 +3,17 @@ using NUnit.Framework;
 using Framework;
 
 using Framework.Pages.TreatwellPages;
+using Tests.BaseClasses;
 
 namespace Tests.Treatwell
 {
-    public class Index
+    public class Index : BaseTest
     {
         [SetUp]
         public static void setUp()
         {
-            Driver.setDriver();
             Driver.open("https://www.treatwell.lt/");
+            IndexPage.clickAcceptCookies();
         }
 
         [Test]
@@ -21,7 +22,7 @@ namespace Tests.Treatwell
             string expectedSearchResult = "salonai siūlantys paslaugą: veidas šalia Justiniškes, Vilnius";
             string actualSearchResult;
 
-            IndexPage.clickAcceptCookies();
+            
             IndexPage.enterServiceName("Veidas");
             IndexPage.enterLocation("Justiniškės");
             IndexPage.chooseDateTomorrow();
@@ -36,8 +37,7 @@ namespace Tests.Treatwell
         {
             string expectedSearchResult = "Look Good by A. Lo";
             string actualSearchResult;
-
-            IndexPage.clickAcceptCookies();
+                        
             IndexPage.clickSalonBar();
             IndexPage.enterSalonName("Look Good");
             IndexPage.clickSearchButtonSalonBar();
