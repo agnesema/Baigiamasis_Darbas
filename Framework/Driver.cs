@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,7 @@ namespace Framework
         private static IWebDriver driver;
         public static void setDriver()
         {
-            //ChromeOptions options = new ChromeOptions();
-            //options.AddArgument("--headless"); //leidzia testus neatidarius chrome
-            driver = new ChromeDriver();
+            driver = new FirefoxDriver();
             driver.Manage().Window.Maximize();
         }
 

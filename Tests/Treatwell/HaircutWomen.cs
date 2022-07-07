@@ -1,7 +1,6 @@
 ﻿using Framework;
 using Framework.Pages.TreatwellPages;
 using NUnit.Framework;
-using System.Threading;
 
 namespace Tests.Treatwell
 {
@@ -30,7 +29,24 @@ namespace Tests.Treatwell
 
             actualMessage = HaircutWomenPage.getResultMessage();
             Assert.AreEqual(expectedMessage, actualMessage);
+        }
 
+        [Test]
+        public static void reserveService()
+        {
+            string expectedPrice;
+            string actualPrice;
+
+            IndexPage.clickAcceptCookies();
+            HaircutWomenPage.clickOnFirstSalon();
+            expectedPrice = HaircutWomenPage.readPrice();
+            HaircutWomenPage.selectHaircutService();
+            HaircutWomenPage.clickChooseTimeButton();
+            HaircutWomenPage.selectDate();
+            HaircutWomenPage.clickSubmit();
+            actualPrice = HaircutWomenPage.readActualPrice();
+            
+            Assert.AreEqual(expectedPrice, actualPrice);
         }
 
 

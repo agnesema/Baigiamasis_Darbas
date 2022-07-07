@@ -29,19 +29,7 @@ namespace Framework.Pages
         internal static void sendKeysToElement(string locator, string keys)
         {
             getElement(locator).SendKeys(keys);
-        }
-
-        internal static void waitForElementToBeClickable(string locator)
-        {
-            WebDriverWait w = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(10));
-            w.Until(ExpectedConditions.ElementToBeClickable(By.XPath(locator)));
-        }
-
-        internal static void clickEnter()
-        {
-            Actions action = new Actions(Driver.getDriver());
-            action.SendKeys(Keys.Enter).Perform();
-        }
+        }              
 
         internal static string getElementText(string locator)
         {
@@ -52,6 +40,11 @@ namespace Framework.Pages
         {
             WebDriverWait w = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(10));
             w.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
+        }
+        internal static void waitForElementToBeClickable(string locator)
+        {
+            WebDriverWait w = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(10));
+            w.Until(ExpectedConditions.ElementToBeClickable(By.XPath(locator)));
         }
     }
 }

@@ -11,17 +11,12 @@ namespace Framework.Pages.TreatwellPages
         public static void selectPartnerByText(string input)
         {
             string locator = "//*[@id='md-salon-type']";
-            //string locator2 = "//*[@id='gift-card-amount-button']";
-            //Common.clickElement(locator2);
-            //Common.clickElement(locator);
-            //Common.waitForElementToBeClickable(locator);
             Common.selectOptionByValue(locator, input);
         }
 
         public static void clickBecomePartnerButton()
         {
             string locator = "//*[@id='menu-item-3255']";
-            //Common.waitForElementToBeClickable(locator);
             Common.clickElement(locator);
         }
 
@@ -40,8 +35,7 @@ namespace Framework.Pages.TreatwellPages
 
         public static void clickSubmitButton()
         {
-            string locator = "//*[@value='Susisiek dabar']";
-            
+            string locator = "//*[@value='Susisiek dabar']";            
             Common.clickElement(locator);
         }
     }
