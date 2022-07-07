@@ -7,10 +7,10 @@
 ##### Treatwell Page
 1. Search for service:
 	- Enter service name ("Veidas") to "Enter Service" input field
-	- Enter location ("Justiniðkës") to "Enter Location" input field
+	- Enter location ("Justiniskes") to "Enter Location" input field
 	- Choose date ("Rytoj") in date field
 	- Click "Search" button
-	- Check if expected message ("salonai siûlantys paslaugà: veidas ðalia Justiniðkes, Vilnius") is equal to actual message.
+	- Check if expected message ("salonai siulantys paslauga: veidas salia Justiniskes, Vilnius") is equal to actual message.
 
 2. Search for salon:
 	- Click "Salon" bar
@@ -24,7 +24,7 @@
 	- Click on "Sort by lowest price"
 	- Check some amenities
 	- Click on "Show result" button
-	- Select secon salon "Women haircut" option
+	- Select second salon "Women haircut" option
 	- Click "book" button
 	- Check if expected message ("1 paslauga ") is equal to actual message.
 
@@ -38,9 +38,9 @@
 5. Fill become partner form:
 	- Click "Become partner" button
 	- Enter email ("email")
-	- Select partner by text from dropdown ("Salonas, ásikûræs namuose")
+	- Select partner by text from dropdown ("Salonas, isikures namuose")
 	- Click "Submit" button
-	- Check if expected message ("Vienas ar daugiau laukø su klaidomis. Patikrinkite ir pataisæ pabandykite ið naujo.") is equal to actual message.
+	- Check if expected message ("Vienas ar daugiau lauku su klaidomis. Patikrinkite ir pataise pabandykite is naujo.") is equal to actual message.
 
 
 
