@@ -14,7 +14,7 @@ namespace Framework.Pages
             return Driver.getDriver().FindElement(By.XPath(locator));
         }
 
-        internal static void selectOptionByValue(string locator, string value)
+        internal static void selectOptionByText(string locator, string value)
         {
             IWebElement element = getElement(locator);
             SelectElement selectElement = new SelectElement(element);

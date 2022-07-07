@@ -7,7 +7,7 @@ namespace Framework.Pages.TreatwellPages
         public static void selectPartnerByText(string input)
         {
             string locator = "//*[@id='md-salon-type']";
-            Common.selectOptionByValue(locator, input);
+            Common.selectOptionByText(locator, input);
         }
 
         public static void clickBecomePartnerButton()
