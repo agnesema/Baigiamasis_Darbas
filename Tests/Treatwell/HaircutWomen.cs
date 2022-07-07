@@ -11,7 +11,7 @@ namespace Tests.Treatwell
         public static void open()
         {
             Driver.open("https://www.treatwell.lt/salonai/procedura-kirpimas-ir-plauku-prieziura/pasiulymo-tipas-vietinis/kur-lietuva/");
-            IndexPage.clickAcceptCookies();
+            HaircutWomenPage.clickAcceptCookies();
         }
 
         [Test]
@@ -32,7 +32,7 @@ namespace Tests.Treatwell
         }
 
         [Test]
-        public static void ReserveServiceAndCheckPrice()
+        public static void bookServiceAndCheckPrice()
         {
             string expectedPrice;
             string actualPrice;

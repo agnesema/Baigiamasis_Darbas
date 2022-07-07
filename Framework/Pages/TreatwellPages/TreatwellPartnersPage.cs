@@ -34,5 +34,11 @@ namespace Framework.Pages.TreatwellPages
             string locator = "//*[@value='Susisiek dabar']";            
             Common.clickElement(locator);
         }
+        public static void clickAcceptCookies()
+        {
+            string locator = "//button[text() = 'Leisti visus slapukus']";
+            Common.waitForElementToBeClickable(locator);
+            Common.clickElement(locator);
+        }
     }
 }

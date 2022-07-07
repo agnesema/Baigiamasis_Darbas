@@ -12,7 +12,7 @@ namespace Tests.Treatwell
         public static void open()
         {
             Driver.open("https://www.treatwell.lt/");
-            IndexPage.clickAcceptCookies();
+            TreatwellMainPage.clickAcceptCookies();
         }
 
         [Test]
@@ -21,13 +21,13 @@ namespace Tests.Treatwell
             string expectedSearchResult = "salonai siūlantys paslaugą: veidas šalia Justiniškes, Vilnius";
             string actualSearchResult;
 
-            
-            IndexPage.enterServiceName("Veidas");
-            IndexPage.enterLocation("Justiniškės");
-            IndexPage.chooseDateTomorrow();
-            IndexPage.clickSearchButton();
 
-            actualSearchResult = IndexPage.getServiceSearchResultMessage();
+            TreatwellMainPage.enterServiceName("Veidas");
+            TreatwellMainPage.enterLocation("Justiniškės");
+            TreatwellMainPage.chooseDateTomorrow();
+            TreatwellMainPage.clickSearchButton();
+
+            actualSearchResult = TreatwellMainPage.getServiceSearchResultMessage();
             Assert.IsTrue(actualSearchResult.Contains(expectedSearchResult));
         }
 
@@ -36,12 +36,12 @@ namespace Tests.Treatwell
         {
             string expectedSearchResult = "Look Good by A. Lo";
             string actualSearchResult;
-                        
-            IndexPage.clickSalonBar();
-            IndexPage.enterSalonName("Look Good");
-            IndexPage.clickSearchButtonSalonBar();
 
-            actualSearchResult = IndexPage.getSalonSearchResultMessage();
+            TreatwellMainPage.clickSalonBar();
+            TreatwellMainPage.enterSalonName("Look Good");
+            TreatwellMainPage.clickSearchButtonSalonBar();
+
+            actualSearchResult = TreatwellMainPage.getSalonSearchResultMessage();
             Assert.AreEqual(expectedSearchResult, actualSearchResult);
         }
     }

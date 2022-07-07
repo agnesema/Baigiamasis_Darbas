@@ -11,7 +11,7 @@ namespace Tests.Treatwell
         public static void open()
         {
             Driver.open("https://www.treatwell.lt/partneriai/");
-            IndexPage.clickAcceptCookies();
+            TreatwellPartnersPage.clickAcceptCookies();
         }
 
         [Test]

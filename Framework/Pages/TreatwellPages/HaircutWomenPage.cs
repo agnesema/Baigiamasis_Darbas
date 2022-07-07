@@ -87,6 +87,12 @@ namespace Framework.Pages.TreatwellPages
         {
             string locator = "//*[text()='Marina @ Yoly']";
             Common.clickElement(locator);
-        }        
+        }
+        public static void clickAcceptCookies()
+        {
+            string locator = "//button[text() = 'Leisti visus slapukus']";
+            Common.waitForElementToBeClickable(locator);
+            Common.clickElement(locator);
+        }
     }
 }

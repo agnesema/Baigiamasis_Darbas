@@ -28,14 +28,14 @@
 	- Click "book" button
 	- Check if expected message ("1 paslauga ") is equal to actual message.
 
-4. Reserve Service And Check Price
+4. Book Service And Check Price:
 	- Click on first salon
 	- Read price next to service
 	- Click on reserve button
 	- Check if expected price is equal to actual price
 	
 ##### Treatwell Partners Page
-5. Fill become partner form
+5. Fill become partner form:
 	- Click "Become partner" button
 	- Enter email ("email")
 	- Select partner by text from dropdown ("Salonas, ásikûræs namuose")

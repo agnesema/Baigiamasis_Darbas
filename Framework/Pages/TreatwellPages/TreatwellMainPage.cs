@@ -2,7 +2,7 @@
 
 namespace Framework.Pages.TreatwellPages
 {
-    public class IndexPage
+    public class TreatwellMainPage
     {
         public static void clickAcceptCookies()
         {
