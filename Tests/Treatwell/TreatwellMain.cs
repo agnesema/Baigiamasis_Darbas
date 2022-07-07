@@ -1,5 +1,4 @@
-﻿
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Framework;
 using Framework.Pages.TreatwellPages;
 using Tests.BaseClasses;
@@ -20,7 +19,6 @@ namespace Tests.Treatwell
         {
             string expectedSearchResult = "salonai siūlantys paslaugą: veidas šalia Justiniškes, Vilnius";
             string actualSearchResult;
-
 
             TreatwellMainPage.enterServiceName("Veidas");
             TreatwellMainPage.enterLocation("Justiniškės");

@@ -41,6 +41,7 @@ namespace Framework.Pages
             WebDriverWait w = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(10));
             w.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
         }
+
         internal static void waitForElementToBeClickable(string locator)
         {
             WebDriverWait w = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(10));

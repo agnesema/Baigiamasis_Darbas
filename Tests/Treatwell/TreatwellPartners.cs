@@ -19,8 +19,7 @@ namespace Tests.Treatwell
         {
             string expectedMessage = "Vienas ar daugiau laukų su klaidomis. Patikrinkite ir pataisę pabandykite iš naujo.";
             string actualMessage;
-
-            
+                        
             TreatwellPartnersPage.clickBecomePartnerButton();
             TreatwellPartnersPage.enterEmail("email");
             TreatwellPartnersPage.selectPartnerByText("Salonas, įsikūręs namuose");
