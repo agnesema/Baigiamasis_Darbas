@@ -55,20 +55,8 @@ namespace Framework.Pages.TreatwellPages
         {
             string locator = "//*[@class='Button-module--buttonContents--e56373']";
             Common.clickElement(locator);
-        }
-
-        public static void clickSubmit()
-        {
-            string locator = "//*[text()='Į užsakymo puslapį']";
-            Common.clickElement(locator);
-        }
-
-        public static void selectDate()
-        {
-            string locator = "//*[@data-date='2022-07-20']";
-            Common.clickElement(locator);
-        }
-
+        }     
+                
         public static void selectHaircutService()
         {
             string locator = "//*[@id='container']/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div[3]/div/div[3]/div/button/div/span";
@@ -99,11 +87,6 @@ namespace Framework.Pages.TreatwellPages
         {
             string locator = "//*[text()='Marina @ Yoly']";
             Common.clickElement(locator);
-        }
-
-        public static void clickOkOnAlertBox()
-        {
-            Common.alertAccept();
-        }
+        }        
     }
 }
