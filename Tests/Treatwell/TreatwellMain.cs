@@ -6,7 +6,7 @@ using Tests.BaseClasses;
 
 namespace Tests.Treatwell
 {
-    public class Index : BaseTest
+    public class TreatwellMain : BaseTest
     {
         [SetUp]
         public static void open()
