@@ -10,7 +10,7 @@ namespace Tests.Treatwell
     public class Index : BaseTest
     {
         [SetUp]
-        public static void setUp()
+        public static void open()
         {
             Driver.open("https://www.treatwell.lt/");
             IndexPage.clickAcceptCookies();

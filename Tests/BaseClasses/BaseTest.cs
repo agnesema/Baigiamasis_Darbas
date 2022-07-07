@@ -12,16 +12,16 @@ namespace Tests.BaseClasses
             Driver.setDriver();
         }
 
-        //[TearDown]
-        //public static void close()
-        //{
-        //    if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
-        //    {
-        //        Driver.takeScreenshot();
-        //    }
+        [TearDown]
+        public static void close()
+        {
+            if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
+            {
+                Driver.takeScreenshot();
+            }
 
-        //    Driver.closeDriver();
-        //}
-        //}
+            Driver.closeDriver();
+        }
     }
 }
+

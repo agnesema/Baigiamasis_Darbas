@@ -5,12 +5,11 @@ using Tests.BaseClasses;
 
 namespace Tests.Treatwell
 {
-    public class HaircutWomen 
+    public class HaircutWomen : BaseTest
     {
         [SetUp]
         public static void open()
         {
-            Driver.setDriver();
             Driver.open("https://www.treatwell.lt/salonai/procedura-kirpimas-ir-plauku-prieziura/pasiulymo-tipas-vietinis/kur-lietuva/");
             IndexPage.clickAcceptCookies();
         }
@@ -32,54 +31,18 @@ namespace Tests.Treatwell
             Assert.AreEqual(expectedMessage, actualMessage);
         }
 
-        //[Test]
-        //public static void reserveService()
-        //{
-        //    string expectedPrice = "25€";
-        //    string actualPrice;
-
-        //    HaircutWomenPage.clickOkOnAlertBox();
-        //    HaircutWomenPage.clickOnFirstSalon();
-        //    //expectedPrice = HaircutWomenPage.readPrice();
-        //    HaircutWomenPage.selectHaircutService();
-        //    HaircutWomenPage.clickChooseTimeButton();
-        //    HaircutWomenPage.selectDate();
-        //    HaircutWomenPage.clickSubmit();
-        //    actualPrice = HaircutWomenPage.readActualPrice();
-            
-        //    Assert.AreEqual(expectedPrice, actualPrice);
-        //}
         [Test]
         public static void ReserveService()
-        {
-            string expectedPrice = "25 €";
-            string actualPrice;
-
-            //HaircutWomenPage.clickOkOnAlertBox();
-            HaircutWomenPage.clickOnFirstSalon();
-            //expectedPrice = HaircutWomenPage.readPrice();
-            HaircutWomenPage.selectHaircutService();
-            HaircutWomenPage.clickChooseTimeButton();
-            //HaircutWomenPage.selectDate();
-            //HaircutWomenPage.clickSubmit();
-            actualPrice = HaircutWomenPage.readActualPrice();
-
-            Assert.AreEqual(expectedPrice, actualPrice);
-        }
-
-        [Test]
-        public static void ReserveTime()
         {
             string expectedPrice;
             string actualPrice;
 
             HaircutWomenPage.clickOnFirstSalon();
-            HaircutWomenPage.selectHaircutService();
-            HaircutWomenPage.clickChooseTimeButton();
-            HaircutWomenPage.selectDate();
-            HaircutWomenPage.clickSubmit();
-        }
+            expectedPrice = HaircutWomenPage.readPrice();
+            HaircutWomenPage.selectHaircutService();            
+            actualPrice = HaircutWomenPage.readActualPrice();
 
-
+            Assert.AreEqual(expectedPrice, actualPrice);
+        }     
     }
 }

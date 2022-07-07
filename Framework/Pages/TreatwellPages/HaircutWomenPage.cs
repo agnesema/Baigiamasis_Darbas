@@ -40,13 +40,13 @@ namespace Framework.Pages.TreatwellPages
 
         public static string readPrice()
         {
-            string locator = "//*[@id='container']/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/div/div/span";
+            string locator = "(//*[@class='Text-module_bodyHeavy__1LMI1'])[9]";
             return Common.getElementText(locator);
         }
 
         public static string readActualPrice()
         {
-            string locator = "//*[text()='Užsakymo suma']/following-sibling::span";
+            string locator = "//*[@class='Summary-module--price--6b426e']";
             Common.waitForElementToBeVisible(locator);
             return Common.getElementText(locator);
         }
@@ -71,7 +71,7 @@ namespace Framework.Pages.TreatwellPages
 
         public static void selectHaircutService()
         {
-            string locator = "(//*[text()='Rezervuoti'])[1]";
+            string locator = "//*[@id='container']/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div[3]/div/div[3]/div/button/div/span";
             //Common.waitForElementToBeClickable(locator);
             Common.clickElement(locator);
         }
@@ -97,7 +97,7 @@ namespace Framework.Pages.TreatwellPages
 
         public static void clickOnFirstSalon()
         {
-            string locator = "//*[text()='Vizija Lux (PC MADA)']";
+            string locator = "//*[text()='Marina @ Yoly']";
             Common.clickElement(locator);
         }
 
